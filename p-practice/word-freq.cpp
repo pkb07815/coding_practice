@@ -1,0 +1,40 @@
+#include <iostream>
+#include <unordered_map>
+ #include<string>
+ #include<sstream>
+
+using namespace std; 
+  
+// Prints frequencies of individual words in str 
+void printFrequencies(const string &str) 
+{ 
+    // declaring map of <string, int> type, each word 
+    // is mapped to its frequency 
+    unordered_map<string, int> wordFreq; 
+  
+    // breaking input into word using string stream 
+    stringstream ss(str);  // Used for breaking words 
+    string word; // To store individual words 
+    while (ss >> word) 
+    {
+
+wordFreq[word]++; 
+cout << "word: "<< word << " map: " << wordFreq[word] << endl;
+    }
+        
+  
+    // now iterating over word, freq pair and printing 
+    // them in <, > format 
+    unordered_map<string, int>:: iterator p; 
+    for (p = wordFreq.begin(); p != wordFreq.end(); p++) 
+        cout << "(" << p->first << ", " << p->second << ")\n"; 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    string str = "geeks for geeks geeks quiz "
+                 "practice qa for"; 
+    printFrequencies(str); 
+    return 0; 
+} 

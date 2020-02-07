@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "__locale": "cpp",
+        "ios": "cpp",
+        "functional": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "python.pythonPath": "/usr/local/bin/python3"
+}
