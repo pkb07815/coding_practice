@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-    // brute force method 
+    // brute force method  time n^3 space 1
     
     // ispalindrome to check if the substring is palindrome.
     bool ispalindrome(string s, int low,int high) {
